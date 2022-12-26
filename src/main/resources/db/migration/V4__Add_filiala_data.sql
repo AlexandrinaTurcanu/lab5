@@ -1,0 +1,3 @@
+INSERT INTO filiala VALUES(1002600007818,'1',10,'bd. Decebal, 80/1 (etajul 3),Chisinau',1002600007813);
+INSERT INTO filiala VALUES(1002600020902,'7',9,'Alessandro Bernardazzi 35 Chisinau',1002600020908);
+INSERT INTO filiala VALUES(1016600035128,'2',11,'Strada Pușkin 47/5, Chisinau',1016600035165);

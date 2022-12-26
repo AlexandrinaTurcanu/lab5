@@ -1,0 +1,4 @@
+INSERT INTO departament VALUES (001,'Vanzari',7,1002600007818);
+INSERT INTO departament VALUES (002,'Contabilitate',5,1002600007818);
+INSERT INTO departament VALUES (003,'Vanzari',9,1002600020902);
+INSERT INTO departament VALUES (004,'Contabilitate',6,1002600020902);

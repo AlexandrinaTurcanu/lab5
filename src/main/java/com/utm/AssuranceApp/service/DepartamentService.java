@@ -9,7 +9,7 @@ import com.utm.AssuranceApp.entity.DepartamentDetails;
 public interface DepartamentService {
     List<Departament> findAllDepartments();
 
-    DepartamentDetails findById(Integer id);
+    Departament findById(Integer id);
 
     void save(Departament departament);
 

@@ -23,7 +23,7 @@ public class CompanyServiceImpl implements CompanyService {
     }
 
     @Override
-    public CompanyDetails findById(Integer id) {
+    public Company findById(Integer id) {
         if(!companyRepository.companyExist(id))
             throw new NotFoundException(
                     "Company with id = " + id + " not exist");

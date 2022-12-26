@@ -28,18 +28,18 @@ public class CompanyRepositoryImpl implements CompanyRepository {
     }
 
     @Override
-    public CompanyDetails findById(Integer id) {
-        CompanyDetails CompanyDetails =
+    public Company findById(Integer id) {
+        Company company =
                 jdbcTemplate.queryForObject("select * from company where id = ?",
                         (result, rowNum) ->
-                                new CompanyDetails(
+                                new Company(
                                         result.getInt("id"),
                                         result.getString("denumire"),
                                         result.getString("licenta"),
                                         result.getInt("nr_filiale"),
                                         result.getString("email")
                                 ),id);
-        return CompanyDetails;
+        return company;
     }
 
     @Override

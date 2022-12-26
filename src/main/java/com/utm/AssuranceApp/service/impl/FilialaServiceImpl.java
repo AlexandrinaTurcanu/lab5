@@ -23,7 +23,7 @@ public class FilialaServiceImpl implements FilialaService {
     }
 
     @Override
-    public FilialaDetails findById(Integer id) {
+    public Filiala findById(Integer id) {
         if (!filialaRepository.filialaExist(id))
             throw new NotFoundException(
                     "Filiala with id = " + id + " not exist");

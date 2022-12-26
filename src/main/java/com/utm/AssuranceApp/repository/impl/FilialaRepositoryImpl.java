@@ -1,7 +1,7 @@
 package com.utm.AssuranceApp.repository.impl;
 
 import com.utm.AssuranceApp.entity.Filiala;
-import com.utm.AssuranceApp.entity.FilialaDetails;
+import com.utm.AssuranceApp.entity.Filiala;
 import com.utm.AssuranceApp.repository.FilialaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -27,18 +27,18 @@ public class FilialaRepositoryImpl implements FilialaRepository {
     }
 
     @Override
-    public FilialaDetails findById(Integer id) {
-        FilialaDetails FilialaDetails =
+    public Filiala findById(Integer id) {
+        Filiala filiala =
                 jdbcTemplate.queryForObject("select * from filiala where id = ?",
                         (result, rowNum) ->
-                                new FilialaDetails(
+                                new Filiala(
                                         result.getInt("id"),
                                         result.getString("nr_filialei"),
                                         result.getInt("nr_produse"),
                                         result.getString("adresa"),
                                         result.getInt("compania_id")
                                 ),id);
-        return FilialaDetails;
+        return filiala;
     }
 
     @Override

@@ -8,7 +8,7 @@ public interface DepartamentRepository {
 
     List<Departament> findAllDepartments();
 
-    DepartamentDetails findById(Integer id);
+    Departament findById(Integer id);
 
     void save(Departament departament);
 

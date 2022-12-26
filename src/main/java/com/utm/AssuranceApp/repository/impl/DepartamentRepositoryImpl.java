@@ -1,7 +1,7 @@
 package com.utm.AssuranceApp.repository.impl;
 
 import com.utm.AssuranceApp.entity.Departament;
-import com.utm.AssuranceApp.entity.DepartamentDetails;
+import com.utm.AssuranceApp.entity.Departament;
 import com.utm.AssuranceApp.repository.DepartamentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -26,17 +26,17 @@ public class DepartamentRepositoryImpl implements DepartamentRepository {
     }
 
     @Override
-    public DepartamentDetails findById(Integer id) {
-        DepartamentDetails DepartamentDetails =
+    public Departament findById(Integer id) {
+        Departament departament =
                 jdbcTemplate.queryForObject("select * from departament where id = ?",
                         (result, rowNum) ->
-                                new DepartamentDetails(
+                                new Departament(
                                         result.getInt("id"),
                                         result.getString("denumire"),
                                         result.getInt("nr_angajati"),
                                         result.getInt("filiala_id")
                                 ),id);
-        return DepartamentDetails;
+        return departament;
     }
 
     @Override

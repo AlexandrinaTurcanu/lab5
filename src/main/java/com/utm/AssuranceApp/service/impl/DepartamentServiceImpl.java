@@ -22,7 +22,7 @@ public class DepartamentServiceImpl implements DepartamentService {
     }
 
     @Override
-    public DepartamentDetails findById(Integer id) {
+    public Departament findById(Integer id) {
         if (!departamentRepository.departamentExist(id))
             throw new NotFoundException(
                     "Departament with id = " + id + " not found");

@@ -8,7 +8,7 @@ public interface CompanyRepository {
 
     List<Company> findAllCompanies();
 
-    CompanyDetails findById(Integer id);
+    Company findById(Integer id);
 
     void save(Company company);
 

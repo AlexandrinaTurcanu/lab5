@@ -23,7 +23,7 @@ public class FilialaController {
     }
 
     @GetMapping("/{id}")
-    public FilialaDetails getById(@PathVariable Integer id) {
+    public Filiala getById(@PathVariable Integer id) {
         return filialaRepository.findById(id);
     }
 

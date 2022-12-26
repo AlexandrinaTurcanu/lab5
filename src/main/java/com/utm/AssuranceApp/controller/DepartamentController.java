@@ -22,7 +22,7 @@ public class DepartamentController {
     }
 
     @GetMapping("/{id}")
-    public DepartamentDetails getById(@PathVariable Integer id) {
+    public Departament getById(@PathVariable Integer id) {
         return departamentService.findById(id);
     }
 

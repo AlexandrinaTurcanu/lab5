@@ -7,7 +7,7 @@ import java.util.List;
 public interface FilialaRepository {
     List<Filiala> findAllBranches();
 
-    FilialaDetails findById(Integer id);
+    Filiala findById(Integer id);
 
     void save(Filiala filiala);
 

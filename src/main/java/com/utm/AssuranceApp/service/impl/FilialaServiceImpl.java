@@ -8,10 +8,10 @@ import com.utm.AssuranceApp.repository.FilialaRepository;
 import com.utm.AssuranceApp.service.FilialaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
-
 public class FilialaServiceImpl implements FilialaService {
 
     @Autowired
@@ -24,7 +24,7 @@ public class FilialaServiceImpl implements FilialaService {
 
     @Override
     public FilialaDetails findById(Integer id) {
-        if(!filialaRepository.filialaExist(id))
+        if (!filialaRepository.filialaExist(id))
             throw new NotFoundException(
                     "Filiala with id = " + id + " not exist");
 
@@ -33,16 +33,16 @@ public class FilialaServiceImpl implements FilialaService {
 
     @Override
     public void save(Filiala filiala) {
-        if(filialaRepository.filialaExist(filiala.getId()))
+        if (filialaRepository.filialaExist(filiala.getId()))
             throw new AlreadyExistException(
-                    "Filiala with id = "+ filiala.getId() + " already exist");
+                    "Filiala with id = " + filiala.getId() + " already exist");
 
         filialaRepository.save(filiala);
     }
 
     @Override
     public void update(Integer id, Filiala filiala) {
-        filialaRepository.update(id,filiala);
+        filialaRepository.update(id, filiala);
     }
 
     @Override
